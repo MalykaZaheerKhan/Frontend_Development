@@ -1,0 +1,107 @@
+header,.section4{
+    background-color:rgb(32, 24, 84);
+    color:white;
+    font-family: 'Segoe UI', sans-serif;    
+}
+.logo{
+    color:yellow;
+    background: linear-gradient(135deg, #5BC8F5, #2E6FE8);
+    width: 34px;
+    height:34px;
+    border-radius: 10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.logo2{   
+    background-color:rgb(199, 183, 199);
+    width: 50px;
+    height:50px;
+    border-radius: 10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.navbar a{
+    text-decoration:none;
+    color:white;
+}
+.header{
+    padding-left:10%;
+    padding-right:10%;
+}
+.glasscard{
+    background: rgba(255, 255, 255, 0.1);
+    border-radius:20px;
+    border:1px solid rgba(255, 255, 255, 0.3);
+    width: 85%;
+    margin :auto;
+    padding:20px;    
+}
+.smallcard{
+    background:rgba(255,255,255,0.2);
+    border-radius:20px;
+    color:white;
+    text-align:center;   
+    padding:10px;   
+}
+.section1{
+    background-color:rgb(236, 235, 235);
+}
+.cards{
+    background-color:white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    border-radius: 20px;
+    padding:20px;
+}
+.cards:hover{
+    transform: scale(1.05);
+}
+.cards h5{
+    font-weight: bold;
+}
+.cards p{
+    color:gray;
+}
+.positionCard{
+    border-radius:20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color:rgb(211, 98, 211);
+    width: 90%;
+    padding:150px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.tag{
+    background-color: azure;
+    border-radius: 25px;
+    border:1px solid grey;
+    padding: 10px 15px;
+    right:-50px;
+    bottom:-30px;      
+}
+p{
+    color:rgb(151, 145, 145);
+}
+
+@media (max-width:767px){
+   .tag {
+       right:-5px;
+    }
+}
+
+/* SAAS:
+
+:root{
+
+--primary:#00bdf1;
+
+--dark:#201854;
+
+--lightText:#888;
+
+} */
+
+/* background:var(--primary); */
