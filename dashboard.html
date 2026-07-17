@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+<style>
+    .content .card_box {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 20px;
+        padding: 5px;
+        text-align: center;
+        background: linear-gradient(rgb(170, 135, 90), rgb(43, 41, 41))
+    }
+
+    /* ===== Responsive bar chart (Bootstrap flex based) ===== */
+    .graph_card {
+        min-height: 320px;
+    }
+
+    .graph_wrap {
+        width: 100%;
+        /* height comes from Bootstrap's ratio helper on the wrapper below */
+    }
+
+    .graph_axis {
+        border-left: 1px solid rgba(255, 255, 255, 0.6);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    }
+
+    .bars {
+        gap: 1.2%;
+    }
+
+    .bar {
+        flex: 1 1 0;
+        max-width: 40px;
+        border-radius: 10px 10px 0 0;
+        transition: height 0.3s ease;
+    }
+
+    @media (max-width: 575.98px) {
+        .bar {
+            max-width: 26px;
+            border-radius: 6px 6px 0 0;
+        }
+    }
+
+    p {
+        color: silver;
+        font-size: 12px;
+    }
+</style>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark p-3 sticky-top"
+        style=" background: linear-gradient(to bottom ,rgb(170, 135, 90) 0%,black 40%)">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">🙍‍♀️ Dashboard</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link bi bi-window-sidebar" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bi bi-box-seam" href="AddProduct.html">Add Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bi bi-box" href="ShowProduct.html">Product Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bi bi-question-circle" href="">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-dark">
+        <div class="container text-light d-flex flex-row flex-wrap">
+
+            <div class="row">
+                <div class="col">
+                    <h1>Dashboard</h1>
+                    <p>Here is what happeing today, take a view.</p>
+                </div>
+            </div>
+            <div class="row gap-2 p-3 content">
+                <div class="col-6 col-md col-lg card_box">
+                    <p>Total Revenue</p>
+                    <p class="fw-bold fs-3">$4215.672</p>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 card_box">
+                    <p>Total Users</p>
+                    <p class="fw-bold fs-3">2345</p>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 card_box">
+                    <p>Total Products</p>
+                    <p class="fw-bold fs-3">46,576</p>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 card_box">
+                    <p>Total Orders</p>
+                    <p class="fw-bold fs-3">571</p>
+                </div>
+
+
+                <div class="row mt-3 column-gap-4 d-flex justify-content-between flex-wrap flex-lg-nowrap">
+                    <!-- ===== Overview / Chart card ===== -->
+                    <div class="col-12 col-lg-6 card_box graph_card p-3">
+                        <h2 class="text-start">Overview</h2>
+                        <p class="text-start">Your sales and revenue overview for the last 12 months</p>
+
+                        <!-- Bootstrap ratio utility keeps the chart responsive at a fixed aspect ratio -->
+                        <div class="ratio ratio-16x9 graph_wrap">
+                            <div class="d-flex flex-column">
+                                <!-- plotting area: axis + bars, grows to fill available space -->
+                                <div class="graph_axis flex-grow-1 d-flex align-items-end px-2 pb-0">
+                                    <div class="bars d-flex align-items-end w-100 h-100">
+                                        <div class="bar bg-primary" style="height: 40%;"></div>
+                                        <div class="bar bg-success" style="height: 65%;"></div>
+                                        <div class="bar bg-warning" style="height: 52%;"></div>
+                                        <div class="bar bg-danger" style="height: 78%;"></div>
+                                        <div class="bar bg-info" style="height: 46%;"></div>
+                                        <div class="bar bg-primary" style="height: 42%;"></div>
+                                        <div class="bar bg-success" style="height: 65%;"></div>
+                                        <div class="bar bg-warning" style="height: 52%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 card_box text-start p-5">
+                        <h2>Recent Activity</h2>
+                        <p>Your latest business activities</p>
+                        <ul>
+                            <li>New user registeration</li>
+                            <p>David just signed up</p>
+                            <li>Order Completed</li>
+                            <p>Order id #123 has completed</p>
+                            <li>Product updated</li>
+                            <p>Iphone 15 pro details has updated</p>
+                            <li>Payment received</li>
+                            <p>$23545 has been received from customer id#1233</p>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
